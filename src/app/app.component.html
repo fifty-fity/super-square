@@ -1,27 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<nav>
+  <a routerLink="/scores" routerLinkActive="active">Top scores</a>
+  <a routerLink="/tutorial" routerLinkActive="active">Tutorial</a>
+</nav>
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
+    <img width="100" alt="Angular Logo"
+         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScRQO178Q3fVZQhErqraEgS0fWkBrVdbuil7IlDjJdLwoC3bCt">
   </h1>
-  <img width="300" alt="Angular Logo"
-       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScRQO178Q3fVZQhErqraEgS0fWkBrVdbuil7IlDjJdLwoC3bCt">
+  <button><a routerLink="/board" routerLinkActive="active">Play now!</a></button>
+  
 </div>
-<div>
-  <button>Play</button>
-  <button>Tutorial</button>
-  <button>Scores</button>
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+
 
 <router-outlet></router-outlet>

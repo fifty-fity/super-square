@@ -1,3 +1,13 @@
-<p>
-  board works!
-</p>
+<table style="margin:auto;width:60%">
+  <thead>
+    <td>Score:</td>
+    <td>Lives:</td>
+  </thead>
+  <tr *ngFor="let row of blocks; let i = index">
+    <td *ngFor="let item of row; let j = index">
+      <div style="border:1px solid black;">{{i}} {{j}} {{item}}</div>
+    </td>
+  </tr>
+</table>
+
+

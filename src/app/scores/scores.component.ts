@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Hash } from 'crypto';
+
+interface IScore {
+  name: string;
+  score: number;
+};
 
 @Component({
   selector: 'app-scores',
@@ -6,8 +12,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./scores.component.scss']
 })
 export class ScoresComponent implements OnInit {
+   
+  scores: IScore[];
 
-  constructor() { }
+constructor() {
+  this.scores = [
+    { name: "John", score: 10 },
+    { name: "John", score: 10 },
+    { name: "John", score: 10 },
+    { name: "John", score: 10 },
+    { name: "John", score: 10 },
+    { name: "John", score: 10 },
+  ]
+}
 
   ngOnInit() {
   }

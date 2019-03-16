@@ -1,3 +1,10 @@
-<p>
-  scores works!
-</p>
+<table>
+  <tr *ngFor="let row of scores; let i = index">
+    <td>
+      <div>{{row.name}}</div>
+    </td>
+    <td >
+      <div>{{row.score}}</div>
+    </td>
+  </tr>
+</table>

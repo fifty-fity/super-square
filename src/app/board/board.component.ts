@@ -6,10 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent implements OnInit {
+   blocks: String[][];
 
-  constructor() { }
+  constructor() {
+    //var blocks: String[][] = [["void", "wall"], ["void", "wall"]];
+    this.blocks = [
+      ["void", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"],
+      ["void", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"],
+      ["void", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"],
+      ["void", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"],
+      ["void", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"],
+      ["void", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"],
+      ["void", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"],
+      ["void", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"],
+      ["void", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"],
+      ["PLAYER", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"]
+    ];
+  }
 
   ngOnInit() {
+    
   }
 
 }
