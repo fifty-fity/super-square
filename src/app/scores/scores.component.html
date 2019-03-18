@@ -1,10 +1,32 @@
-<table>
-  <tr *ngFor="let row of scores; let i = index">
-    <td>
-      <div>{{row.name}}</div>
-    </td>
-    <td >
-      <div>{{row.score}}</div>
-    </td>
-  </tr>
-</table>
+<div class="wrapper">
+<div class="table">
+  <div class="row header">
+      <div class="cell name">
+        Name
+      </div>
+      <div class="cell score">
+        Score
+      </div>
+    </div>
+
+  <div class="row" *ngFor="let row of scores; let i = index">
+    <div class="cell name" data-title="Name">
+      {{row.name}}
+    </div>
+    
+    <div class="cell score" data-title="Score">
+      {{row.score}}
+    </div>
+  
+  </div>
+</div>
+
+</div>
+
+
+
+
+  
+  
+    
+    

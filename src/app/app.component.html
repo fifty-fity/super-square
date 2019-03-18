@@ -1,16 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<nav>
-  <a routerLink="/scores" routerLinkActive="active">Top scores</a>
-  <a routerLink="/tutorial" routerLinkActive="active">Tutorial</a>
-</nav>
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
     <img width="100" alt="Angular Logo"
          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScRQO178Q3fVZQhErqraEgS0fWkBrVdbuil7IlDjJdLwoC3bCt">
   </h1>
-  <button><a routerLink="/board" routerLinkActive="active">Play now!</a></button>
-  
+  	<nav class="routes">
+		<a class="route" routerLink="/scores" routerLinkActive="active">Top scores</a>
+		<a class="route" routerLink="/tutorial" routerLinkActive="active">Tutorial</a>
+	</nav>
+
+	<br>
+  <a class="btn"routerLink="/board" routerLinkActive="active">Play now!</a>
 </div>
 
 
