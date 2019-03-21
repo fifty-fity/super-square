@@ -2,7 +2,7 @@
     font-family: 'Splatch';
     src: url(src/assets/fonts/Splatch.ttf) format('truetype');
 }
-$font-stack:    Splatch, sans-serif;
+$font-stack: Splatch, sans-serif;
 $primary-color: #ea6153;
 $angle: 8px;
 $angle-o: 4px;
@@ -13,7 +13,7 @@ nav{
 	margin-right: auto;
 }
 a{
-	
+
 	padding-top: 100px;
 }
 .route{
@@ -29,86 +29,87 @@ a{
 h1{
 	font: 30px $font-stack;
 	text-transform: uppercase;
+  margin-top:0%;
+  margin-bottom: 4%
 }
-.btn {
-	font: 20px $font-stack;
-  top: 0;
-  left: 0;
-  transition: all .15s linear 0s;
-  position: relative;
-  display: inline-block;
-  padding: 15px 25px;
-  background-color: green;
-  
-  text-transform: uppercase;
-  color: white;
-  letter-spacing: 1px;
-  
-  box-shadow: -6px 6px 0 gray;
+nav{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.route{
+	margin: 5%;
   text-decoration: none;
-  
-  &:hover {
-    top: 3px;
-    left: -3px;
-    box-shadow: -3px 3px 0 gray;
-    
-    &::after {
-      top: 1px;
-      left: -2px;
-      width: $angle-o;
-      height: $angle-o;
-    }
-    
-    &::before {
-      bottom: -2px;
-      right: 1px;
-      width: $angle-o;
-      height: $angle-o;
-    }
-  }
-  
-  &::after {
-    transition: all .15s linear 0s;
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: -4px;
-    width: $angle;
-    height: $angle;
-    background-color: gray;
-    transform: rotate(45deg);
-    z-index: -1;
-    
-  }
-  
-  &::before {
-    transition: all .15s linear 0s;
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    right: 2px;
-    width: $angle;
-    height: $angle;
-    background-color: gray;
-    transform: rotate(45deg);
-    z-index: -1;
-  }
+  text-align: center;
+	font: 20px $font-stack;
+	text-transform: uppercase;
+	padding: 10px 20px 10px 20px;
+  width: 200px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  height: 55px;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 150px;
+  background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
+  box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+.route:hover{
+	background-position: 100% 0;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
-a.btn { position: relative; }
+svg#play {
+ width:150px;
+ margin: 60px auto;
+ display:block;
+ cursor: pointer;
+ transform-origin: 50% 50%;
+}
 
-a:active.btn {
-  top: 6px;
-  left: -6px;
-  box-shadow: none;
-  
-  &:before {
-    bottom: 1px;
-    right: 1px;
-  }
-  
-  &:after {
-    top: 1px;
-    left: 1px;
-  }
+svg#play #triangle {
+  fill:rgba(22,22,22,0);
+  transition:500ms;
+  transform-origin: 50% 50%;
+}
+svg#play:hover #triangle {
+  fill:#A3CD3A;
+  transform-origin: 50% 50%;
+}
+
+ svg #lineOne, svg #lineTwo {
+  transform-origin: 50% 50%;
+  transition: 1s;
+}
+
+ svg:hover #lineOne {
+  transform: rotate(260deg);
+   -webkit-transform: rotate(260deg);
+-moz-transform: rotate(260deg);
+-o-transform: rotate(260deg);
+   transform-origin: 50% 50%;
+}
+
+ svg:hover #lineTwo {
+  transform: rotate(-450deg);
+   transform-origin: 50% 50%;
+}
+#container{
+  text-align:center;
+  margin:0px;
+  padding:0px;
+}
+#wrapper{
+ background-color: #efecec;
+ background-image: linear-gradient(315deg, #efecec 0%, #f9aba4 74%);
+ -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
