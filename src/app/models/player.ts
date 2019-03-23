@@ -1,4 +1,5 @@
 export class Player {
+    
   private name: string;
   private lives: number;
   private score: number;
@@ -6,12 +7,13 @@ export class Player {
   constructor(name: string) {
     this.name = name;
     this.lives = 3;
+    this.score = 0;
   }
 
   /**
    * Take a life from the player.
    */
-  public takeALife() {
+  public loseLife() {
     this.lives--;
   }
 
@@ -19,24 +21,32 @@ export class Player {
    * Adds score to the player with the specified amount.
    * @param amount - The amount of score to add.
    */
-  public addToScore(amount: number) {
+  public addScore(amount: number) {
     this.score += amount;
   }
 
+  public setScore(score: number) {
+    this.score = score;
+  }
+
 // Getter and setters
-  public get playerName(): string {
+  public getName(): string {
     return this.name;
   }
 
-  public set playerName(name: string) {
+  public setName(name: string) {
     this.name = name;
   }
 
-  public get playerLives(): number {
+  public getLives(): number {
     return this.lives;
   }
 
-  public get playerScore(): number {
+  public getScore(): number {
     return this.score;
+  }
+
+  public setLives(lives: number) {
+    this.lives = lives;
   }
 }

@@ -66,7 +66,7 @@ nav{
   transition: all .4s ease-in-out;
 }
 
-svg#play {
+svg.play {
  width:150px;
  margin: 60px auto;
  display:block;
@@ -74,12 +74,12 @@ svg#play {
  transform-origin: 50% 50%;
 }
 
-svg#play #triangle {
+svg.play #triangle {
   fill:rgba(22,22,22,0);
   transition:500ms;
   transform-origin: 50% 50%;
 }
-svg#play:hover #triangle {
+svg.play:hover #triangle {
   fill:#A3CD3A;
   transform-origin: 50% 50%;
 }
@@ -112,4 +112,9 @@ svg#play:hover #triangle {
  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.inline{
+  display:inline-block;
+  width:50px;
 }

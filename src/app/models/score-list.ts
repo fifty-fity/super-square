@@ -1,15 +1,26 @@
 import {Player} from './player';
 
 export class ScoreList {
-  scoreList: Array<string>;
+  private scoreList = localStorage.getItem('scoreList');
 
-  public addToScoreList(player: Player) {
-    // This should write to a file instead.
-    this.scoreList.push(player.playerName + ' ' + player.playerScore);
+  public addToScoreList(name: string, score: number) {
+    
+    // Put the object into storage
+    //localStorage.setItem('scoreList', JSON.stringify(this.scoreList));
+    // Retrieve the object from storage
+    //var retrievedObject = localStorage.getItem('scoreList');
+    //console.log('retrievedObject: ', JSON.parse(retrievedObject));
+
+    //write to local storage
+    
+    var retrievedList = JSON.parse(this.scoreList);
+    retrievedList[0].push({ name: score });
+    localStorage.setItem('scoreList', JSON.stringify(retrievedList));
+    
   }
 
 // Getters and setters
-  public get scoreboard() {
+  public getList() {
     return this.scoreList;
   }
 }

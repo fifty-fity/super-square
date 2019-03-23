@@ -1,108 +1,29 @@
 import {BlockType} from 'codelyzer/angular/styles/cssAst';
 
-interface LevelFormat {
-  cell0: BlockType;
-  cell1: BlockType;
-  cell2: BlockType;
-  cell3: BlockType;
-  cell4: BlockType;
-  cell5: BlockType;
-  cell6: BlockType;
-  cell7: BlockType;
-  cell8: BlockType;
-  cell9: BlockType;
-  cell10: BlockType;
-  cell11: BlockType;
-  cell12: BlockType;
-  cell13: BlockType;
-  cell14: BlockType;
-  cell15: BlockType;
-  cell16: BlockType;
-  cell17: BlockType;
-  cell18: BlockType;
-  cell19: BlockType;
-  cell20: BlockType;
-  cell21: BlockType;
-  cell22: BlockType;
-  cell23: BlockType;
-  cell24: BlockType;
-  cell25: BlockType;
-  cell26: BlockType;
-  cell27: BlockType;
-  cell28: BlockType;
-  cell29: BlockType;
-  cell30: BlockType;
-  cell31: BlockType;
-  cell32: BlockType;
-  cell33: BlockType;
-  cell34: BlockType;
-  cell35: BlockType;
-  cell36: BlockType;
-  cell37: BlockType;
-  cell38: BlockType;
-  cell39: BlockType;
-  cell40: BlockType;
-  cell41: BlockType;
-  cell42: BlockType;
-  cell43: BlockType;
-  cell44: BlockType;
-  cell45: BlockType;
-  cell46: BlockType;
-  cell47: BlockType;
-  cell48: BlockType;
-  cell49: BlockType;
-  cell50: BlockType;
-  cell51: BlockType;
-  cell52: BlockType;
-  cell53: BlockType;
-  cell54: BlockType;
-  cell55: BlockType;
-  cell56: BlockType;
-  cell57: BlockType;
-  cell58: BlockType;
-  cell59: BlockType;
-  cell60: BlockType;
-  cell61: BlockType;
-  cell62: BlockType;
-  cell63: BlockType;
-  cell64: BlockType;
-  cell65: BlockType;
-  cell66: BlockType;
-  cell67: BlockType;
-  cell68: BlockType;
-  cell69: BlockType;
-  cell70: BlockType;
-  cell71: BlockType;
-  cell72: BlockType;
-  cell73: BlockType;
-  cell74: BlockType;
-  cell75: BlockType;
-  cell76: BlockType;
-  cell77: BlockType;
-  cell78: BlockType;
-  cell79: BlockType;
-  cell80: BlockType;
-  cell81: BlockType;
-  cell82: BlockType;
-  cell83: BlockType;
-  cell84: BlockType;
-  cell85: BlockType;
-  cell86: BlockType;
-  cell87: BlockType;
-  cell88: BlockType;
-  cell89: BlockType;
-  cell90: BlockType;
-  cell91: BlockType;
-  cell92: BlockType;
-  cell93: BlockType;
-  cell94: BlockType;
-  cell95: BlockType;
-  cell96: BlockType;
-  cell97: BlockType;
-  cell98: BlockType;
-  cell99: BlockType;
-}
 
 export class Level {
+  private levelMap: string[][];
+  private num: number;
 
+  public getLevelmap(): string[][] {
+    return this.levelMap;
+  }
+
+  public setLevelMap(num: number) {
+    if (num == 1) {
+      this.levelMap = [["void", "void", "void", "void", "void", "void", "void", "void", "void", "void", "void",],
+        ["void", "void", "void", "void", "void", "void", "void", "void", "void", "void", "void",],
+        ["void", "void", "void", "void", "void", "void", "void", "void", "void", "void", "void",],
+        ["void", "void", "void", "void", "void", "void", "void", "void", "void", "void", "void",],
+        ["void", "void", "void", "void", "void", "void", "void", "void", "void", "void", "void",],
+        ["void", "void", "void", "void", "void", "void", "void", "void", "void", "void", "void",],
+        ["void", "void", "void", "void", "void", "void", "void", "void", "void", "void", "void",],
+        ["void", "void", "void", "void", "void", "void", "void", "void", "void", "void", "void",],
+        ["void", "void", "void", "void", "void", "void", "void", "void", "void", "void", "void",],
+        ["void", "void", "void", "void", "void", "void", "void", "void", "void", "void", "void",]
+        
+      ];
+    }
+    
+  }
 }
