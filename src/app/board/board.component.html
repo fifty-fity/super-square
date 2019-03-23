@@ -1,13 +1,16 @@
-<table style="margin:auto;width:60%">
-  <thead>
-    <td>Score:</td>
-    <td>Lives:</td>
-  </thead>
+
+  <h2 class="info"><span>Score: </span>100</h2>
+  <h2 class="info"><span>Lives: </span>3</h2>
+
+<table>
+
   <tr *ngFor="let row of blocks; let i = index">
-    <td *ngFor="let item of row; let j = index">
-      <div style="border:1px solid black;">{{i}} {{j}} {{item}}</div>
+    <td  id="{{i}} {{j}}" class="block {{item}}" *ngFor="let item of row; let j = index">
+    	<!-- {{item}} -->
+    	<img src="assets/images/{{item}}.png" alt="">
     </td>
   </tr>
+
 </table>
 
 

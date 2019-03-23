@@ -11,16 +11,16 @@ export class BoardComponent implements OnInit {
   constructor() {
     //var blocks: String[][] = [["void", "wall"], ["void", "wall"]];
     this.blocks = [
-      ["void", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"],
-      ["void", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"],
-      ["void", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"],
-      ["void", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"],
-      ["void", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"],
-      ["void", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"],
-      ["void", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"],
-      ["void", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"],
-      ["void", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"],
-      ["PLAYER", "wall", "void", "wall", "void", "wall", "void", "wall", "void", "wall"]
+      ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"],
+      ["wall", "player", "void", "wall", "void", "void", "wall", "void", "void", "wall"],
+      ["wall", "void", "void", "wall", "coin", "void", "void", "void", "void", "wall"],
+      ["wall", "void", "void", "wall", "wall", "void", "void", "void", "void", "wall"],
+      ["wall", "void", "question", "void", "void", "void", "void", "void", "void", "wall"],
+      ["wall", "void", "void", "void", "void", "void", "wall", "bomb", "void", "wall"],
+      ["wall", "void", "void", "void", "void", "void", "wall", "wall", "void", "wall"],
+      ["wall", "wall", "wall", "wall", "void", "coin", "wall", "void", "void", "wall"],
+      ["wall", "coin", "void", "void", "void", "void", "wall", "void", "finish", "wall"],
+      ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"]
     ];
   }
 

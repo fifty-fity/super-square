@@ -4,56 +4,29 @@
 }
 $font-stack:    Splatch, sans-serif;
 $primary-color: #ea6153;
-
-ul{
-	width: 700px;
-	padding: 0px;
-	margin: 0 auto;
-	list-style-type: none;
+.wrapper{
+  margin-left: auto;
+  margin-right: auto;
 }
-
-li:last-child {
-  border: none;
+ul{
+  text-align: center;
+	list-style-type: none;
 }
 
 li {
   font: 30px $font-stack;
 	text-transform: uppercase;
-	text-decoration: none;
-  border-bottom: 1px solid black;
-  text-decoration: none;
   color: #000;
   -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
   -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
   -o-transition: font-size 0.3s ease, background-color 0.3s ease;
   -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
   transition: font-size 0.3s ease, background-color 0.3s ease;
-  display: block;
-  width: 700px;
 }
 
 li:hover {
   font-size: 35px;
-  background: #f10f10f6;
 }
 span{
 	color: $primary-color;
-}
-.background{
-  background-color: #f2f2f2;
-  position: absolute;
-  width: 700px;
-  margin-left: auto;
-  margin-right:auto;
-  font: 30px $font-stack;
-  text-transform: uppercase;
-  padding: 0%;
-  margin-bottom: 10%;
-}
-.wrapper{
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0%;
-  max-width: 700px;
-
 }
