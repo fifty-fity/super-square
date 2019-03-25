@@ -30,6 +30,7 @@ export class BoardComponent implements OnInit {
     var myLevelHandler: LevelHandler = new LevelHandler();
     var mapping = myLevelHandler.loadLevel(this.playerLevel);
     myLevelHandler.spawnBoard(mapping);
+    myGame.frame();
 
     /*
       var element = document.getElementById("player");

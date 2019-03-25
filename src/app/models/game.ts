@@ -27,7 +27,7 @@ export class Game {
   }
 
   public startGame() {
-    
+
   }
 
   public endGame() {
@@ -35,7 +35,7 @@ export class Game {
     this.currentLevel = 1;
     this.sessionPlayer.setScore(0);
     this.sessionPlayer.setLives(3);
-   
+
   }
 
   public getLevel(): number {
@@ -63,14 +63,17 @@ export class Game {
           break;
         case "ArrowUp":
           // Do something for "up arrow" key press.
+          alert("arrowUp");
           break;
         case "ArrowLeft":
           // Do something for "left arrow" key press.
+          alert("arrowLeft");
           break;
         case "ArrowRight":
           // Do something for "right arrow" key press.
+          alert("ArrowRight");
           break;
-        
+
         default:
           return; // Quit when this doesn't handle the key event.
       }

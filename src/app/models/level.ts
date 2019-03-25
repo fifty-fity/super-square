@@ -8,7 +8,7 @@ export class Level {
   public getLevelMap(): string[][] {
     return this.levelMap;
   }
-ss
+
   public setLevelMap(num: number) {
     if (num == 1) {
       this.levelMap = [
