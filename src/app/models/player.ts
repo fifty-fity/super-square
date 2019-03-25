@@ -1,11 +1,12 @@
+
 export class Player {
-    
+
   private name: string;
   private lives: number;
   private score: number;
 
-  constructor(name: string) {
-    this.name = name;
+  constructor() {
+    this.name = "";
     this.lives = 3;
     this.score = 0;
   }
@@ -23,6 +24,7 @@ export class Player {
    */
   public addScore(amount: number) {
     this.score += amount;
+    return this.score;
   }
 
   public setScore(score: number) {

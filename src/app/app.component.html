@@ -2,7 +2,7 @@
 <div id="container">
 <img class="logo" alt="Logo" src="assets/images/logo.png">
   <div id="header">
-    
+
     <div id="title">
       <h1>{{ title }}!</h1>
       <!-- <img class="logo" alt="Logo" src="assets/images/logo.png"> -->
@@ -11,12 +11,12 @@
     <ul class="nav">
       <li><a class="route" routerLink="/scores" routerLinkActive="active">Top scores</a></li>
       <li><a class="route" routerLink="/tutorial" routerLinkActive="active">Tutorial</a></li>
-    </ul>  
+    </ul>
 
   </div>
-  
 
-  <br>  
+
+  <br>
 
   <!--if we have a name saved already-->
     <div *ngIf="name!=''">
@@ -46,10 +46,10 @@
       <a class="btn"routerLink="/name" routerLinkActive="active">Play now!</a>
     </div>
     <br>
-    
+
   <h2 class="name"><span>name:</span> {{name}}</h2>
 
- 
+
 
 </div>
 <router-outlet></router-outlet>

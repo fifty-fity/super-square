@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Player} from '../models/player';
+import {Game} from '../models/game';
+import {LevelHandler} from '../models/level-handler';
 
 @Component({
   selector: 'app-board',
@@ -6,26 +9,64 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent implements OnInit {
-   blocks: String[][];
+
+    playerLevel:number;
+    playerScore:number;
+    playerLives:number;
 
   constructor() {
-    //var blocks: String[][] = [["void", "wall"], ["void", "wall"]];
-    this.blocks = [
-      ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"],
-      ["wall", "player", "void", "wall", "void", "void", "wall", "void", "void", "wall"],
-      ["wall", "void", "void", "wall", "coin", "void", "void", "void", "void", "wall"],
-      ["wall", "void", "void", "wall", "wall", "void", "void", "void", "void", "wall"],
-      ["wall", "void", "question", "void", "void", "void", "void", "void", "void", "wall"],
-      ["wall", "void", "void", "void", "void", "void", "wall", "bomb", "void", "wall"],
-      ["wall", "void", "void", "void", "void", "void", "wall", "wall", "void", "wall"],
-      ["wall", "wall", "wall", "wall", "void", "coin", "wall", "void", "void", "wall"],
-      ["wall", "coin", "void", "void", "void", "void", "wall", "void", "finish", "wall"],
-      ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"]
-    ];
+
   }
 
   ngOnInit() {
-    
+    var playerName: string= localStorage.getItem("name");
+    var player: Player = new Player();
+
+    player.setName(playerName);
+    var myGame: Game = new Game(player);
+    this.playerLevel = myGame.getLevel();
+    this.playerScore = player.getScore();
+    this.playerLives = player.getLives();
+    var myLevelHandler: LevelHandler = new LevelHandler();
+    var mapping = myLevelHandler.loadLevel(this.playerLevel);
+    myLevelHandler.spawnBoard(mapping);
+
+    /*
+      var element = document.getElementById("player");
+
+      case "ArrowDown":
+           element.style.left = parseInt(element.style.left) - 5 + 'px';
+       break;
+
+       case "ArrowUp":
+           element.style.left = parseInt(element.style.left) + 5 + 'px';
+       break;
+
+       case "ArrowLeft":
+           element.style.top = parseInt(element.style.top) - 5 + 'px';
+       break;
+
+         case "ArrowRight":
+           element.style.top = parseInt(element.style.top) + 5 + 'px';
+       break;
+   */
+
+    /*
+    myLevelHandler.();
+    this.blocks = myGame.startGame();
+    var index : number;
+    alert("all good");
+    //getting player ele
+    var elPlayer:HTMLElement;
+    elPlayer = document.getElementsByClassName("block player");
+    //myGame.frame(elPlayer);
+    */
+
+
+
+
+
+
   }
 
 }

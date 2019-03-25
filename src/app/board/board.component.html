@@ -1,16 +1,12 @@
 
-  <h2 class="info"><span>Score: </span>100</h2>
-  <h2 class="info"><span>Lives: </span>3</h2>
+  <h2 class="info"><span>Score: </span>{{playerScore}}</h2>
+  <h2 class="info"><span>Lives: </span>{{playerLives}}</h2>
+<div id ="container">
+<div id="mydiv">
+<table id="mytable">
 
-<table>
 
-  <tr *ngFor="let row of blocks; let i = index">
-    <td  id="{{i}} {{j}}" class="block {{item}}" *ngFor="let item of row; let j = index">
-    	<!-- {{item}} -->
-    	<img src="assets/images/{{item}}.png" alt="">
-    </td>
-  </tr>
 
 </table>
-
-
+</div>
+</div>
