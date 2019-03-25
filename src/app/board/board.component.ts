@@ -30,27 +30,28 @@ export class BoardComponent implements OnInit {
     var myLevelHandler: LevelHandler = new LevelHandler();
     var mapping = myLevelHandler.loadLevel(this.playerLevel);
     myLevelHandler.spawnBoard(mapping);
+    //myGame.test();
     myGame.frame();
 
-    /*
-      var element = document.getElementById("player");
+    
+      // var element = document.getElementById("player");
 
-      case "ArrowDown":
-           element.style.left = parseInt(element.style.left) - 5 + 'px';
-       break;
+      // case "ArrowDown":
+      //      element.style.left = parseInt(element.style.left) - 5 + 'px';
+      //  break;
 
-       case "ArrowUp":
-           element.style.left = parseInt(element.style.left) + 5 + 'px';
-       break;
+      //  case "ArrowUp":
+      //      element.style.left = parseInt(element.style.left) + 5 + 'px';
+      //  break;
 
-       case "ArrowLeft":
-           element.style.top = parseInt(element.style.top) - 5 + 'px';
-       break;
+      //  case "ArrowLeft":
+      //      element.style.top = parseInt(element.style.top) - 5 + 'px';
+      //  break;
 
-         case "ArrowRight":
-           element.style.top = parseInt(element.style.top) + 5 + 'px';
-       break;
-   */
+      //    case "ArrowRight":
+      //      element.style.top = parseInt(element.style.top) + 5 + 'px';
+      //  break;
+   
 
     /*
     myLevelHandler.();

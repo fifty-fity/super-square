@@ -13,13 +13,14 @@ export class LevelHandler {
             var row = document.createElement("tr");
              for (var j = 0; j < 10; j++) {
                 var cell = document.createElement("td");
+                  cell.setAttribute("id", i+""+j);
                 var imgdiv = document.createElement("div");
 
                 var cellCode = document.createElement("img");
                 cellCode.setAttribute("height","75px");
                 //var cellCode = document.createTextNode(map[i][j]);
                   if (map[i][j] == "player"){
-                    imgdiv.setAttribute("id", "player");
+                    imgdiv.setAttribute("class", "player");
                     cellCode.setAttribute("src","assets/images/player.png");
 
                   }
@@ -33,7 +34,7 @@ export class LevelHandler {
                     cellCode.setAttribute("src","assets/images/wall.png");
                   }
                   else if (map[i][j] == "question"){
-                    imgdiv.setAttribute("class", "random");
+                    imgdiv.setAttribute("class", "question");
                     cellCode.setAttribute("src","assets/images/question.png");
                   }
                   else if (map[i][j] == "finish"){
