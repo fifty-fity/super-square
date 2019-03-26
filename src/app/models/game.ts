@@ -50,7 +50,7 @@ export class Game {
     this.sessionPlayer.addScore(score);
   }
 
-  public frame(evt: KeyboardEvent) {
+  public frame() {
     //this works
     //Game.endGame();
 
@@ -66,12 +66,12 @@ export class Game {
         case "ArrowDown":
           // Do something for "down arrow" key press.
           
-          var player: Element = document.getElementsByClassName('player')[0];
+          var player= document.getElementsByClassName('player')[0];
 
           var player_id = player.parentElement.getAttribute("id");
           
           var below_block_id = 10 + Number(player_id);
-          var below_block: Element = document.getElementById(String(below_block_id)).firstChild;
+          var below_block= document.getElementById(String(below_block_id)).firstChild as HTMLElement;
           var below_block_class = below_block.getAttribute("class");
           
           // alert(player_id);
@@ -81,9 +81,11 @@ export class Game {
 
           while(below_block_class != "wall"){
               below_block.setAttribute("class", "player");
-              below_block.firstChild.setAttribute("src", "assets/images/player.png");
+              var below_block_img = below_block.firstChild as HTMLElement;
+              below_block_img.setAttribute("src", "assets/images/player.png");
               player.setAttribute("class", "void");
-              player.firstChild.setAttribute("src", "assets/images/void.png");
+              var playe_img = player.firstChild as HTMLElement;
+              playe_img.setAttribute("src", "assets/images/void.png");
 
             if(below_block_class == "void"){
               // alert("done");
@@ -99,7 +101,7 @@ export class Game {
               //endGame();
             }
             below_block_id += 10;
-            below_block = document.getElementById(below_block_id).firstChild;
+            below_block = document.getElementById(String(below_block_id)).firstChild as HTMLElement;
             below_block_class = below_block.getAttribute("class");
             player = document.getElementsByClassName('player')[0];
          }
@@ -107,12 +109,12 @@ export class Game {
         case "ArrowUp":
           // Do something for "down arrow" key press.
           
-          var player: Element = document.getElementsByClassName('player')[0];
+          var player= document.getElementsByClassName('player')[0];
 
           var player_id = player.parentElement.getAttribute("id");
           var above_block_id = Number(player_id) - 10;
 
-          var above_block: Element = document.getElementById(String(above_block_id)).firstChild;
+          var above_block= document.getElementById(String(above_block_id)).firstChild as HTMLElement;
           var above_block_class = above_block.getAttribute("class");
           
           // alert(player_id);
@@ -121,9 +123,12 @@ export class Game {
 
           while(above_block_class != "wall"){
               above_block.setAttribute("class", "player");
-              above_block.firstChild.setAttribute("src", "assets/images/player.png");
+              var above_block_img = above_block.firstChild as HTMLElement;
+              above_block_img.setAttribute("src", "assets/images/player.png");
               player.setAttribute("class", "void");
-              player.firstChild.setAttribute("src", "assets/images/void.png");
+              var playe_img = player.firstChild as HTMLElement;
+              playe_img.setAttribute("src", "assets/images/void.png");
+
             if(above_block_class == "void"){
               // alert("done");
             }else if(above_block_class == "coin"){
@@ -136,19 +141,19 @@ export class Game {
               //endGame();
             }
             above_block_id -= 10;
-            above_block = document.getElementById(above_block_id).firstChild;
+            above_block = document.getElementById(String(above_block_id)).firstChild as HTMLElement;
             above_block_class = above_block.getAttribute("class");
             player = document.getElementsByClassName('player')[0];
          }
           break;
         case "ArrowLeft":
           // Do something for "left arrow" key press.
-          var player: Element = document.getElementsByClassName('player')[0];
+          var player= document.getElementsByClassName('player')[0];
 
           var player_id = player.parentElement.getAttribute("id");
           var left_block_id = Number(player_id) -1;
 
-          var left_block: Element = document.getElementById(String(left_block_id)).firstChild;
+          var left_block= document.getElementById(String(left_block_id)).firstChild as HTMLElement;
           var left_block_class = left_block.getAttribute("class");
           
           // alert(player_id);
@@ -157,9 +162,11 @@ export class Game {
 
           while(left_block_class != "wall"){
               left_block.setAttribute("class", "player");
-              left_block.firstChild.setAttribute("src", "assets/images/player.png");
+              var left_block_img = left_block.firstChild as HTMLElement;
+              left_block_img.setAttribute("src", "assets/images/player.png");
               player.setAttribute("class", "void");
-              player.firstChild.setAttribute("src", "assets/images/void.png");
+              var playe_img = player.firstChild as HTMLElement;
+              playe_img.setAttribute("src", "assets/images/void.png");
             if(left_block_class == "void"){
               // alert("done");
             }else if(left_block_class == "coin"){
@@ -172,7 +179,7 @@ export class Game {
               //endGame();
             }
             left_block_id -= 1;
-            left_block = document.getElementById(left_block_id).firstChild;
+            left_block = document.getElementById(String(left_block_id)).firstChild as HTMLElement;
             left_block_class = left_block.getAttribute("class");
             player = document.getElementsByClassName('player')[0];
          }
@@ -181,12 +188,12 @@ export class Game {
         case "ArrowRight":
           // Do something for "right arrow" key press.
           // Do something for "left arrow" key press.
-          var player: Element = document.getElementsByClassName('player')[0];
+          var player= document.getElementsByClassName('player')[0];
 
           var player_id = player.parentElement.getAttribute("id");
           var right_block_id = Number(player_id) + 1;
 
-          var right_block: Element = document.getElementById(String(right_block_id)).firstChild;
+          var right_block= document.getElementById(String(right_block_id)).firstChild as HTMLElement;
           var right_block_class = right_block.getAttribute("class");
           
           // alert(player_id);
@@ -196,9 +203,11 @@ export class Game {
 
           while(right_block_class != "wall"){
             right_block.setAttribute("class", "player");
-            right_block.firstChild.setAttribute("src", "assets/images/player.png");
-            player.setAttribute("class", "void");
-            player.firstChild.setAttribute("src", "assets/images/void.png");
+              var right_block_img = right_block.firstChild as HTMLElement;
+              right_block_img.setAttribute("src", "assets/images/player.png");
+              player.setAttribute("class", "void");
+              var playe_img = player.firstChild as HTMLElement;
+              playe_img.setAttribute("src", "assets/images/void.png");
             if(right_block_class == "void"){
               // alert("done");
             }else if(right_block_class == "coin"){
@@ -211,7 +220,7 @@ export class Game {
               //endGame();
             }
             right_block_id += 1;
-            right_block = document.getElementById(right_block_id).firstChild;
+            right_block = document.getElementById(String(right_block_id)).firstChild as HTMLElement;
             right_block_class = right_block.getAttribute("class");
             player = document.getElementsByClassName('player')[0];
          }
