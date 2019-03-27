@@ -4,7 +4,7 @@ import { Level } from './level';
 
 export class LevelHandler {
   public spawnBoard(map: string[][]) {
-
+    
         var mydiv = document.getElementById("mydiv");
 
         var mytable = document.getElementById("mytable");

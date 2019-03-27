@@ -3,8 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\board"
+    "\\src\\assets",
+    "\\src\\assets\\images"
   ],
-  "SelectedNode": "\\src\\app\\board\\board.component.ts",
+  "SelectedNode": "\\src\\assets\\images\\logo.png",
   "PreviewInSolutionExplorer": false
 }

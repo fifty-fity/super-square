@@ -11,27 +11,16 @@ export class Player {
     this.score = 0;
   }
 
-  /**
-   * Take a life from the player.
-   */
-  public loseLife() {
-    this.lives--;
-  }
+ //Getters and setters
 
-  /**
-   * Adds score to the player with the specified amount.
-   * @param amount - The amount of score to add.
-   */
-  public addScore(amount: number) {
-    this.score += amount;
+  public getScore(): number {
     return this.score;
   }
-
   public setScore(score: number) {
     this.score = score;
   }
 
-// Getter and setters
+
   public getName(): string {
     return this.name;
   }
@@ -40,15 +29,13 @@ export class Player {
     this.name = name;
   }
 
+
   public getLives(): number {
     return this.lives;
-  }
-
-  public getScore(): number {
-    return this.score;
   }
 
   public setLives(lives: number) {
     this.lives = lives;
   }
+     
 }
