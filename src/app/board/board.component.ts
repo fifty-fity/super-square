@@ -11,20 +11,17 @@ import { LevelHandler } from '../models/level-handler';
 export class BoardComponent implements OnInit {
 
   player: Player = new Player();
-  myGame: Game = new Game(this.player);
-  myLevelHandler: LevelHandler = new LevelHandler();  
+  game: Game = new Game(this.player);
+  levelHandler: LevelHandler = new LevelHandler();
 
   constructor() {
-    var playerName: string = localStorage.getItem("name");
+    const playerName: string = localStorage.getItem('name');
     this.player.setName(playerName);
   }
 
   ngOnInit() {
-    
-    var mapping = this.myLevelHandler.loadLevel(this.myGame.getLevel());
-    this.myLevelHandler.spawnBoard(mapping);
-    this.myGame.frame(this.player, this.myLevelHandler);
-   
+    const mapping = this.levelHandler.loadLevel(this.game.getLevel());
+    this.levelHandler.spawnBoard(mapping);
+    this.game.frame(this.player, this.levelHandler);
   }
-
 }

@@ -1,12 +1,13 @@
 import {Game} from './game';
 import {Player} from './player';
+import {log} from 'util';
 
 enum BlockType {
   coin = 1,
   bomb = 2,
   wall = 3,
   goal = 4,
-  random = 5,
+  question = 5,
   player = 6
 }
 
@@ -18,7 +19,6 @@ export class Block {
    * @param floor - The minimum/starting number.
    * @param ceiling - The maximum/last number.
    */
-
   static getRandomInt(floor: number, ceiling: number): number {
     return Math.floor(Math.random() * (ceiling - floor)) + floor;
   }
@@ -28,33 +28,39 @@ export class Block {
    * @param blockType The type of the block.
    * @param game The current game session where the reactions take place.
    */
-  public reaction(blockType: BlockType, game: Game) {
-    // Various reactions depending on the block type.
-    //coin block
-    if (blockType === 1) {
-      var player:Player = game.getPlayer();
-      var score:number = player.getScore();
-      score = player.addScore(10);
-      player.setScore(score);
+  public reaction(block: string, game: Game) {
+    const blockType = BlockType[block];
 
+    log('Impacted with this class: ' + block);
+
+    if (blockType === 1) {
+      game.getPlayer().addScore(10);
     }
-    //bomb block
+
     if (blockType === 2) {
-      var player:Player = game.getPlayer();
-      var playerLives:number = player.getLives();
-      playerLives = playerLives - 1;
-      player.setLives(playerLives);
+      if (game.getPlayer().getLives() <= 0) {
+        alert('Game over');
+        game.endGame();
+      }
+      game.getPlayer().takeLife();
+      game.reset();
+      alert('Boom! The board has been reset!');
     }
-    //goal block
+
     if (blockType === 4) {
       game.increaseLevel();
+      alert('You\'ve hit the goal! Advancing to the next level!');
+      // TODO: Handle the situation where the player has cleared the last available level.
     }
-    //random block
+
     if (blockType === 5) {
-      const randomType = Block.getRandomInt(1, 5);
+      const randomType = Block.getRandomInt(1, 3);
+      this.reaction(BlockType[randomType], game);
+      alert('Randomized to a...' + BlockType[randomType] + '!');
     }
   }
-  public setType(blockType:BlockType) {
+
+  public setType(blockType: BlockType) {
     this.type = blockType;
   }
 }
