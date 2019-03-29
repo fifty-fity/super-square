@@ -22,6 +22,6 @@ export class BoardComponent implements OnInit {
   ngOnInit() {
     const mapping = this.levelHandler.loadLevel(this.game.getLevel());
     this.levelHandler.spawnBoard(mapping);
-    this.game.frame(this.player, this.levelHandler);
+    this.game.frame(this.levelHandler);
   }
 }

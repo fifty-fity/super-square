@@ -1,6 +1,7 @@
 import {Player} from './player';
 import { Block } from './block';
 import { LevelHandler } from './level-handler';
+import * as gameStrings from '../strings.json';
 
 enum MovementDirection {
   up = -10,
@@ -14,8 +15,8 @@ export class Game {
   private sessionPlayer: Player;
   private sessionLevelHandler: LevelHandler;
 
-  private imgPlayer = 'assets/images/player.png';
-  private imgVoid = 'assets/images/void.png';
+  // private imgPlayer = 'assets/images/player.png';
+  /// private imgVoid = 'assets/images/void.png';
 
   constructor(player: Player) {
     this.sessionLevel = 1;
@@ -49,10 +50,6 @@ export class Game {
   }
 
 // Methods
-  public spawn(block: Block) {
-    block.setType(6);
-  }
-
   public endGame() {
     this.sessionPlayer.setScore(0);
     this.sessionPlayer.setLives(3);
@@ -68,7 +65,11 @@ export class Game {
     // TODO: Reset should also clear up everything. Currently board spawns at the bottom.
   }
 
-  public frame(playerObj: Player, levelHandler: LevelHandler) {
+  /**
+   * Handles the game's input listening during game runtime.
+   * @param levelHandler The level handler to be used for listening.
+   */
+  public frame(levelHandler: LevelHandler) {
     const self = this;
     this.sessionLevelHandler = levelHandler;
 
@@ -76,7 +77,6 @@ export class Game {
       if (event.defaultPrevented) {
         return;
       }
-
       switch (event.key) {
         case 'ArrowDown':
           self.move(MovementDirection.down);
@@ -89,13 +89,10 @@ export class Game {
           break;
         case 'ArrowRight':
           self.move(MovementDirection.right);
-          // self.right(playerObj, levelHandler);
           break;
 
-        default: return; // Quit when this doesn't handle the key event
+        default: return;
       }
-
-      // Cancel the default action to avoid it being handled twice
       event.preventDefault();
     }, true);
   }
@@ -109,10 +106,6 @@ export class Game {
     const playerDOMElementId = playerDOMElement.parentElement.getAttribute('id');
     let targetBlockId = Number(playerDOMElementId) + movementDirection;
 
-    if (document.getElementById(String(targetBlockId)).firstChild == null) {
-      return;
-    }
-
     let targetBlockElement = document.getElementById(String(targetBlockId)).firstChild as HTMLElement;
     let targetBlockElementClass = targetBlockElement.getAttribute('class');
 
@@ -120,11 +113,11 @@ export class Game {
       targetBlockElement.setAttribute('class', 'player');
 
       const targetBlockImageElement = targetBlockElement.firstChild as HTMLElement;
-      targetBlockImageElement.setAttribute('src', this.imgPlayer);
+      targetBlockImageElement.setAttribute('src', gameStrings.images.player);
 
       playerDOMElement.setAttribute('class', 'void');
       const playerImageElement = playerDOMElement.firstChild as HTMLElement;
-      playerImageElement.setAttribute('src', this.imgVoid);
+      playerImageElement.setAttribute('src', gameStrings.images.void);
 
       new Block().reaction(targetBlockElementClass, this);
 

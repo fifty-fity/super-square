@@ -1,6 +1,6 @@
 import {Game} from './game';
-import {Player} from './player';
 import {log} from 'util';
+import * as gameStrings from '../strings.json';
 
 enum BlockType {
   coin = 1,
@@ -25,38 +25,36 @@ export class Block {
 
   /**
    * Reactions for each block type.
-   * @param blockType The type of the block.
+   * @param block The block we want to react to.
    * @param game The current game session where the reactions take place.
    */
   public reaction(block: string, game: Game) {
     const blockType = BlockType[block];
-
-    log('Impacted with this class: ' + block);
-
+    // TODO: Replace alerts with a better kind of response.
     if (blockType === 1) {
       game.getPlayer().addScore(10);
     }
 
     if (blockType === 2) {
       if (game.getPlayer().getLives() <= 0) {
-        alert('Game over');
+        alert(gameStrings.dialogs.gameOver);
         game.endGame();
       }
       game.getPlayer().takeLife();
       game.reset();
-      alert('Boom! The board has been reset!');
+      alert(gameStrings.dialogs.bomb);
     }
 
     if (blockType === 4) {
       game.increaseLevel();
-      alert('You\'ve hit the goal! Advancing to the next level!');
+      alert(gameStrings.dialogs.goal);
       // TODO: Handle the situation where the player has cleared the last available level.
     }
 
     if (blockType === 5) {
       const randomType = Block.getRandomInt(1, 3);
       this.reaction(BlockType[randomType], game);
-      alert('Randomized to a...' + BlockType[randomType] + '!');
+      alert(gameStrings.dialogs.question + ' ' + BlockType[randomType] + '!');
     }
   }
 
