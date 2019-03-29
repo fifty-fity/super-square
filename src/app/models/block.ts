@@ -47,7 +47,7 @@ export class Block {
 
     if (blockType === 4) {
       alert(gameStrings.dialogs.goal);
-      if (game.getLevel() > 1) {
+      if (game.getLevel() === game.getMaxLevels()) {
         game.getScoreList().addToScoreList(game.getPlayer());
         alert(gameStrings.dialogs.victory);
         game.endGame();

@@ -16,16 +16,59 @@
       },
     "2": {
       "data": {
+        "1":["wall","wall","wall","wall","wall","wall","wall","wall","wall","wall"],
+        "2":["wall","player","void","void","void","wall","void","void","void","wall"],
+        "3":["wall","void","void","void","void","void","void","void","void","wall"],
+        "4":["wall","wall","void","void","void","void","void","void","wall","wall"],
+        "5":["wall","wall","void","void","void","wall","void","void","wall","wall"],
+        "6":["wall","wall","void","void","wall","finish","void","void","coin","wall"],
+        "7":["wall","void","void","void","void","void","void","void","void","wall"],
+        "8":["wall","void","void","wall","void","void","void","void","wall","wall"],
+        "9":["wall","coin","wall","coin","void","void","void","question","wall","wall"],
+        "10":["wall","wall","wall","wall","wall","wall","wall","wall","wall","wall"]
+      }
+    },
+    "3": {
+      "data": {
+        "1":["wall","wall","wall","wall","wall","wall","wall","wall","wall","wall"],
+        "2":["wall","player","void","wall","coin","wall","wall","wall","wall","wall"],
+        "3":["wall","void","wall","void","void","bomb","void","void","wall","wall"],
+        "4":["wall","void","void","void","void","void","wall","void","void","wall"],
+        "5":["wall","void","void","wall","void","void","coin","void","wall","wall"],
+        "6":["wall","wall","void","void","wall","finish","void","void","void","wall"],
+        "7":["wall","void","void","bomb","wall","void","void","void","void","wall"],
+        "8":["wall","void","wall","wall","void","void","void","coin","void","wall"],
+        "9":["wall","void","void","void","void","void","void","wall","void","wall"],
+        "10":["wall","wall","wall","wall","wall","wall","wall","wall","wall","wall"]
+
+      }
+    },
+    "4": {
+      "data": {
         "1": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"],
-        "2": ["wall", "player", "void", "void", "bomb", "wall", "void", "void", "void", "wall"],
-        "3": ["wall", "void", "void", "wall", "coin", "void", "void", "void", "void", "wall"],
-        "4": ["wall", "void", "void", "wall", "wall", "void", "void", "void", "void", "wall"],
-        "5": ["wall", "wall", "void", "void", "void", "void", "void", "void", "void", "wall"],
-        "6": ["wall", "question", "void", "void", "void", "void", "wall", "void", "void", "wall"],
-        "7": ["wall", "void", "void", "void", "void", "void", "wall", "wall", "void", "wall"],
-        "8": ["wall", "wall", "wall", "wall", "void", "coin", "wall", "finish", "void", "wall"],
-        "9": ["wall", "coin", "void", "void", "void", "void", "wall", "void", "void", "wall"],
+        "2": ["wall", "player", "void", "void", "wall", "void", "void", "void", "void", "wall"],
+        "3": ["wall", "void", "void", "void", "void", "void", "void", "void", "void", "wall"],
+        "4": ["wall", "void", "void", "bomb", "wall", "question", "void", "void", "void", "wall"],
+        "5": ["wall", "void", "void", "wall", "wall", "wall", "void", "void", "void", "wall"],
+        "6": ["wall", "void", "void", "wall", "coin", "void", "void", "coin", "wall", "wall"],
+        "7": ["wall", "void", "wall", "void", "void", "void", "coin", "wall", "wall", "wall"],
+        "8": ["wall", "void", "void", "void", "void", "void", "wall", "finish", "void", "wall"],
+        "9": ["wall", "void", "void", "wall", "void", "void", "void", "void", "void", "wall"],
         "10": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"]
+      }
+    },
+    "5": {
+      "data": {
+        "1": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"],
+        "2": ["wall", "player", "void", "void", "void", "wall", "void", "void", "void", "wall"],
+        "3": ["wall", "wall", "wall", "wall", "coin", "void", "void", "void", "void", "wall"],
+        "4": ["wall", "question", "void", "wall", "wall", "void", "void", "void", "wall", "wall"],
+        "5": ["wall", "wall", "void", "void", "wall", "void", "void", "void", "void", "wall"],
+        "6": ["wall", "wall", "wall", "void", "void", "void", "wall", "void", "void", "wall"],
+        "7": ["wall", "void", "void", "void", "bomb", "void", "void", "void", "wall", "wall"],
+        "8": ["wall", "void", "wall", "wall", "wall", "coin", "wall", "void", "void", "wall"],
+        "9": ["wall", "coin", "void", "void", "void", "void", "void", "void", "void", "wall"],
+        "10": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "finish", "wall"]
       }
     }
   }

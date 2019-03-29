@@ -17,6 +17,7 @@ export class Game {
   private sessionPlayer: Player;
   private sessionLevelHandler: LevelHandler;
   private scoreList: ScoreList;
+  private maxLevels = 5;
 
   constructor(player: Player) {
     this.sessionLevel = 1;
@@ -48,6 +49,10 @@ export class Game {
 
   public getScoreList(): ScoreList {
     return this.scoreList;
+  }
+
+  public getMaxLevels(): number {
+    return this.maxLevels;
   }
 
   public setLevel(level: number) {
