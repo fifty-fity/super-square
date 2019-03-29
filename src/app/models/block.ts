@@ -1,7 +1,5 @@
 import {Game} from './game';
-import {log} from 'util';
-import * as gameStrings from '../strings.json';
-import {ScoreList} from './score-list';
+import * as gameStrings from '../../assets/resources/strings.json';
 
 enum BlockType {
   coin = 1,
@@ -51,7 +49,7 @@ export class Block {
       alert(gameStrings.dialogs.goal);
       if (game.getLevel() > 1) {
         game.getScoreList().addToScoreList(game.getPlayer());
-        alert('You\'ve won!');
+        alert(gameStrings.dialogs.victory);
         game.endGame();
         return;
       }

@@ -1,7 +1,7 @@
 import { Block } from './block';
 import {Player} from './player';
 import { Level } from './level';
-import * as gameStrings from '../strings.json';
+import * as gameStrings from '../../assets/resources/strings.json';
 
 export class LevelHandler {
   /**

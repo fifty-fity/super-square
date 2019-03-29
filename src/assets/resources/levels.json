@@ -1,0 +1,33 @@
+{
+  "levels": {
+    "1": {
+        "data": {
+          "1": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"],
+          "2": ["wall", "player", "void", "void", "bomb", "wall", "void", "void", "void", "wall"],
+          "3": ["wall", "void", "void", "wall", "coin", "void", "void", "void", "void", "wall"],
+          "4": ["wall", "void", "void", "wall", "wall", "void", "void", "void", "void", "wall"],
+          "5": ["wall", "wall", "void", "void", "void", "void", "void", "void", "void", "wall"],
+          "6": ["wall", "question", "void", "void", "void", "void", "wall", "void", "void", "wall"],
+          "7": ["wall", "void", "void", "void", "void", "void", "wall", "wall", "void", "wall"],
+          "8": ["wall", "wall", "wall", "wall", "void", "coin", "wall", "finish", "void", "wall"],
+          "9": ["wall", "coin", "void", "void", "void", "void", "wall", "void", "void", "wall"],
+          "10": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"]
+        }
+      },
+    "2": {
+      "data": {
+        "1": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"],
+        "2": ["wall", "player", "void", "void", "bomb", "wall", "void", "void", "void", "wall"],
+        "3": ["wall", "void", "void", "wall", "coin", "void", "void", "void", "void", "wall"],
+        "4": ["wall", "void", "void", "wall", "wall", "void", "void", "void", "void", "wall"],
+        "5": ["wall", "wall", "void", "void", "void", "void", "void", "void", "void", "wall"],
+        "6": ["wall", "question", "void", "void", "void", "void", "wall", "void", "void", "wall"],
+        "7": ["wall", "void", "void", "void", "void", "void", "wall", "wall", "void", "wall"],
+        "8": ["wall", "wall", "wall", "wall", "void", "coin", "wall", "finish", "void", "wall"],
+        "9": ["wall", "coin", "void", "void", "void", "void", "wall", "void", "void", "wall"],
+        "10": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"]
+      }
+    }
+  }
+}
+

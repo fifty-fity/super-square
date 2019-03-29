@@ -1,8 +1,9 @@
 import {Player} from './player';
 import { Block } from './block';
 import { LevelHandler } from './level-handler';
-import * as gameStrings from '../strings.json';
+import * as gameStrings from '../../assets/resources/strings.json';
 import {ScoreList} from './score-list';
+import {isNull} from 'util';
 
 enum MovementDirection {
   up = -10,
@@ -108,6 +109,10 @@ export class Game {
     const playerDOMElementId = playerDOMElement.parentElement.getAttribute('id');
     let targetBlockId = Number(playerDOMElementId) + movementDirection;
 
+    if (isNull(document.getElementById(String(targetBlockId)))) {
+      return;
+    }
+
     let targetBlockElement = document.getElementById(String(targetBlockId)).firstChild as HTMLElement;
     let targetBlockElementClass = targetBlockElement.getAttribute('class');
 
@@ -124,6 +129,11 @@ export class Game {
       new Block().reaction(targetBlockElementClass, this);
 
       targetBlockId += movementDirection;
+
+      if (isNull(document.getElementById(String(targetBlockId)))) {
+        return;
+      }
+
       targetBlockElement = document.getElementById(String(targetBlockId)).firstChild as HTMLElement;
       targetBlockElementClass = targetBlockElement.getAttribute('class');
       playerDOMElement = document.getElementsByClassName('player')[0];

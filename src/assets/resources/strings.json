@@ -13,6 +13,8 @@
     "goal": "You've hit the goal! Advancing to the next level.",
     "question": "You've found a...",
     "gameOver": "Game over!",
-    "noScores": "No scores to display."
+    "victory": "You've beaten the game!",
+    "noScores": "No scores to display.",
+    "welcome": "Good luck,"
   }
 }

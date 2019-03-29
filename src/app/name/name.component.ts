@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as gameStrings from '../../assets/resources/strings.json';
 
 @Component({
   selector: 'app-name',
@@ -13,7 +14,7 @@ export class NameComponent implements OnInit {
   }
   setNamePlay(name: string) {
     localStorage.setItem('sessionPlayerName', name);
-    alert(localStorage.getItem('sessionPlayerName'));
+    alert(gameStrings.dialogs.welcome + ' ' + localStorage.getItem('sessionPlayerName') + ' !');
   }
 
 }

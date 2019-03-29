@@ -1,55 +1,29 @@
-import {BlockType} from 'codelyzer/angular/styles/cssAst';
-
+import * as levelData from '../../assets/resources/levels.json';
+import {log} from 'util';
 
 export class Level {
   private levelMap: string[][];
+  private maxLevel = 2;
   private num: number;
 
   public getLevelMap(): string[][] {
     return this.levelMap;
   }
 
-  public setLevelMap(num: number) {
-    if (num === 1) {
-      this.levelMap = [
-          ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall'],
-          ['wall', 'player', 'void', 'void', 'bomb', 'wall', 'void', 'void', 'void', 'wall'],
-          ['wall', 'void', 'void', 'wall', 'coin', 'void', 'void', 'void', 'void', 'wall'],
-          ['wall', 'void', 'void', 'wall', 'wall', 'void', 'void', 'void', 'void', 'wall'],
-          ['wall', 'wall', 'void', 'void', 'void', 'void', 'void', 'void', 'void', 'wall'],
-          ['wall', 'question', 'void', 'void', 'void', 'void', 'wall', 'void', 'void', 'wall'],
-          ['wall', 'void', 'void', 'void', 'void', 'void', 'wall', 'wall', 'void', 'wall'],
-          ['wall', 'wall', 'wall', 'wall', 'void', 'coin', 'wall', 'finish', 'void', 'wall'],
-          ['wall', 'coin', 'void', 'void', 'void', 'void', 'wall', 'void', 'void', 'wall'],
-          ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall']
-      ];
-    } else if (num === 2) {
-      this.levelMap = [
-        ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall'],
-        ['wall', 'player', 'void', 'wall', 'void', 'void', 'wall', 'void', 'void', 'wall'],
-        ['wall', 'void', 'void', 'wall', 'coin', 'void', 'void', 'wall', 'void', 'wall'],
-        ['wall', 'coin', 'void', 'wall', 'wall', 'void', 'void', 'void', 'void', 'wall'],
-        ['wall', 'bomb', 'void', 'void', 'void', 'void', 'void', 'void', 'void', 'wall'],
-        ['wall', 'question', 'void', 'void', 'void', 'void', 'wall', 'bomb', 'void', 'wall'],
-        ['wall', 'void', 'void', 'void', 'void', 'void', 'wall', 'wall', 'void', 'wall'],
-        ['wall', 'wall', 'wall', 'wall', 'void', 'coin', 'wall', 'finish', 'void', 'wall'],
-        ['wall', 'coin', 'void', 'void', 'void', 'void', 'wall', 'void', 'void', 'wall'],
-        ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall']
-      ];
-    } else if (num === 3) {
-      this.levelMap = [
-        ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall'],
-        ['wall', 'player', 'void', 'wall', 'void', 'void', 'wall', 'void', 'void', 'wall'],
-        ['wall', 'void', 'void', 'wall', 'coin', 'void', 'void', 'wall', 'void', 'wall'],
-        ['wall', 'coin', 'void', 'wall', 'wall', 'void', 'void', 'void', 'void', 'wall'],
-        ['wall', 'bomb', 'void', 'void', 'void', 'void', 'void', 'void', 'void', 'wall'],
-        ['wall', 'question', 'void', 'void', 'void', 'void', 'wall', 'bomb', 'void', 'wall'],
-        ['wall', 'void', 'void', 'void', 'void', 'void', 'wall', 'wall', 'void', 'wall'],
-        ['wall', 'wall', 'wall', 'wall', 'void', 'coin', 'wall', 'finish', 'void', 'wall'],
-        ['wall', 'coin', 'void', 'void', 'void', 'void', 'wall', 'void', 'void', 'wall'],
-        ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall']
-      ];
+  public setLevelMap(levelNumber: number) {
+    const tempMap = [];
+    log(levelNumber);
+
+    if (levelNumber === this.maxLevel) {
+      levelNumber = 1;
     }
 
+    for (let i = 0; i < 10; i++) {
+      if (levelNumber > 1) {
+        levelNumber -= 1;
+      }
+      tempMap[i] = Object.values(Object.values(levelData.levels)[levelNumber].data)[i];
+    }
+    this.levelMap = tempMap;
   }
 }

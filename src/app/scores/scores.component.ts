@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ScoreList} from '../models/score-list';
 import {Player} from '../models/player';
-import * as gameStrings from '../strings.json';
+import * as gameStrings from '../../assets/resources/strings.json';
 import {log} from 'util';
 
 @Component({
