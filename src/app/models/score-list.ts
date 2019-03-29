@@ -1,19 +1,27 @@
 import {Player} from './player';
+import {isNull, log} from 'util';
 
 export class ScoreList {
-  private scoreList = localStorage.getItem('scoreList');
+  private scoreList = JSON.parse(localStorage.getItem('players'));
+  private players = [];
 
-  public addToScoreList(name: string, score: number) {
-    // Put the object into storage
-    // localStorage.setItem('scoreList', JSON.stringify(this.scoreList));
-    // Retrieve the object from storage
-    // var retrievedObject = localStorage.getItem('scoreList');
-    // console.log('retrievedObject: ', JSON.parse(retrievedObject));
+  public addToScoreList(player: Player) {
+    if (this.players.length === 0) {
+      this.players = this.scoreList;
+    }
+    if (this.players.length === 5) {
+      this.players.pop();
+    }
+    this.players.push(player);
+    this.sortPlayers();
+    localStorage.setItem('players', JSON.stringify(this.players));
+  }
 
-    // write to local storage
-    const retrievedList = JSON.parse(this.scoreList);
-    retrievedList[0].push({ name: score });
-    localStorage.setItem('scoreList', JSON.stringify(retrievedList));
+  private sortPlayers() {
+    const sortedPlayers = this.players.sort((a, b) => {
+      return a.score < b.score ? 1 : a.score > b.score ? - 1 : 0;
+    });
+    this.players = sortedPlayers;
   }
 
 // Getters and setters

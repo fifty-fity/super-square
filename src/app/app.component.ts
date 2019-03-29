@@ -8,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   public title = 'super-square';
   public name = '';
-  private localName: string = localStorage.getItem('name');
+  private localName: string = localStorage.getItem('sessionPlayerName');
     ngOnInit(): void {
       if (this.localName != null) {
         this.name = this.localName;
       }
     }
+
 }

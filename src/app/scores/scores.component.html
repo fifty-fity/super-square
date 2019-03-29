@@ -1,5 +1,5 @@
 <div class="wrapper">
-<div class="table">
+<div class="table" *ngIf="scores != null">
   <div class="row header">
       <div class="cell name">
         Name
@@ -9,18 +9,20 @@
       </div>
     </div>
 
-  <div class="row" *ngFor="let row of scores; let i = index">
+  <div class="row" *ngFor="let score of scores">
     <div class="cell name" data-title="Name">
-      {{row.name}}
+      {{score.name}}
     </div>
     
     <div class="cell score" data-title="Score">
-      {{row.score}}
+      {{score.score}}
     </div>
   
   </div>
 </div>
 
+<p class="dialog"  *ngIf="scores == null">{{ msgEmptyList }}</p>
+
 </div>
 
 
@@ -28,5 +30,4 @@
 
   
   
-    
     

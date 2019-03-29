@@ -1,6 +1,5 @@
 
 export class Player {
-
   private name: string;
   private lives: number;
   private score: number;
@@ -17,6 +16,7 @@ export class Player {
    */
   public addScore(amount: number) {
     this.score += amount;
+    localStorage.setItem('sessionPlayerScore', this.getScore().toString());
   }
 
   /**
@@ -33,6 +33,17 @@ export class Player {
     this.lives += 1;
   }
 
+  /**
+   * Prunes the player from the session storage.
+   */
+  public prune() {
+    localStorage.removeItem('sessionPlayerName');
+    localStorage.removeItem('sessionPlayerScore');
+    this.name = '';
+    this.lives = 3;
+    this.score = 0;
+  }
+
 // Getters and setters
   public getScore(): number {
     return this.score;
@@ -40,6 +51,7 @@ export class Player {
 
   public setScore(score: number) {
     this.score = score;
+    localStorage.setItem('sessionPlayerScore', this.getScore().toString());
   }
 
   public getName(): string {

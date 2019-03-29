@@ -12,8 +12,8 @@ export class NameComponent implements OnInit {
   ngOnInit() {
   }
   setNamePlay(name: string) {
-    localStorage.setItem("name", name);
-    alert("Name saved in local storage:"+localStorage.getItem("name"));
+    localStorage.setItem('sessionPlayerName', name);
+    alert(localStorage.getItem('sessionPlayerName'));
   }
 
 }

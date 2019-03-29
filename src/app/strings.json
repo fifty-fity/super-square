@@ -12,6 +12,7 @@
     "bomb": "Boom! The board has been reset!",
     "goal": "You've hit the goal! Advancing to the next level.",
     "question": "You've found a...",
-    "gameOver": "Game over!"
+    "gameOver": "Game over!",
+    "noScores": "No scores to display."
   }
 }

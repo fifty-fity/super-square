@@ -1,6 +1,7 @@
 import {Game} from './game';
 import {log} from 'util';
 import * as gameStrings from '../strings.json';
+import {ScoreList} from './score-list';
 
 enum BlockType {
   coin = 1,
@@ -38,6 +39,7 @@ export class Block {
     if (blockType === 2) {
       if (game.getPlayer().getLives() <= 0) {
         alert(gameStrings.dialogs.gameOver);
+        game.getScoreList().addToScoreList(game.getPlayer());
         game.endGame();
       }
       game.getPlayer().takeLife();
@@ -46,9 +48,14 @@ export class Block {
     }
 
     if (blockType === 4) {
-      game.increaseLevel();
       alert(gameStrings.dialogs.goal);
-      // TODO: Handle the situation where the player has cleared the last available level.
+      if (game.getLevel() > 1) {
+        game.getScoreList().addToScoreList(game.getPlayer());
+        alert('You\'ve won!');
+        game.endGame();
+        return;
+      }
+      game.increaseLevel();
     }
 
     if (blockType === 5) {

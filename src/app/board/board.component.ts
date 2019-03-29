@@ -15,7 +15,7 @@ export class BoardComponent implements OnInit {
   levelHandler: LevelHandler = new LevelHandler();
 
   constructor() {
-    const playerName: string = localStorage.getItem('name');
+    const playerName: string = localStorage.getItem('sessionPlayerName');
     this.player.setName(playerName);
   }
 

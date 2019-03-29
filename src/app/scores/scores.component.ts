@@ -1,32 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-//import { Hash } from 'crypto';
-
-interface IScore {
-  name: string;
-  score: number;
-};
+import {Component, Input, OnInit} from '@angular/core';
+import {ScoreList} from '../models/score-list';
+import {Player} from '../models/player';
+import * as gameStrings from '../strings.json';
+import {log} from 'util';
 
 @Component({
   selector: 'app-scores',
   templateUrl: './scores.component.html',
   styleUrls: ['./scores.component.scss']
 })
-export class ScoresComponent implements OnInit {
-   
-  scores: IScore[];
 
-constructor() {
-  this.scores = [
-    { name: "John", score: 10 },
-    { name: "Bob", score: 32 },
-    { name: "Tim", score: 14 },
-    { name: "Mary", score: 42 },
-    { name: "Amy", score: 42 },
-    { name: "Majmun", score: 100 },
-  ]
-}
+export class ScoresComponent implements OnInit {
+  @Input()
+  msgEmptyList: string;
+  scores: string[];
+
+  private scoreList: ScoreList;
+
+  public constructor() {
+    this.scoreList = new ScoreList();
+  }
 
   ngOnInit() {
+    this.msgEmptyList = gameStrings.dialogs.noScores;
+    this.scores = this.scoreList.getList();
   }
 
 }

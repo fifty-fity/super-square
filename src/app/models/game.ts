@@ -2,6 +2,7 @@ import {Player} from './player';
 import { Block } from './block';
 import { LevelHandler } from './level-handler';
 import * as gameStrings from '../strings.json';
+import {ScoreList} from './score-list';
 
 enum MovementDirection {
   up = -10,
@@ -14,13 +15,12 @@ export class Game {
   private sessionLevel: number;
   private sessionPlayer: Player;
   private sessionLevelHandler: LevelHandler;
-
-  // private imgPlayer = 'assets/images/player.png';
-  /// private imgVoid = 'assets/images/void.png';
+  private scoreList: ScoreList;
 
   constructor(player: Player) {
     this.sessionLevel = 1;
     this.sessionPlayer = player;
+    this.scoreList = new ScoreList();
   }
 
   /**
@@ -45,24 +45,26 @@ export class Game {
     return this.sessionLevelHandler;
   }
 
+  public getScoreList(): ScoreList {
+    return this.scoreList;
+  }
+
   public setLevel(level: number) {
     this.sessionLevel = level;
   }
 
 // Methods
   public endGame() {
-    this.sessionPlayer.setScore(0);
-    this.sessionPlayer.setLives(3);
+    this.sessionPlayer.prune();
     this.setLevel(1);
+    window.location.href = './';
   }
 
   /**
    * Should reset the game's board.
    */
   public reset() {
-    this.sessionPlayer.setScore(0);
     this.getLevelHandler().spawnBoard(this.getLevelHandler().loadLevel(this.getLevel()));
-    // TODO: Reset should also clear up everything. Currently board spawns at the bottom.
   }
 
   /**
