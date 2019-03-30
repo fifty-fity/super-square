@@ -22,29 +22,8 @@ export class LevelHandler {
         const imgdiv = document.createElement('div');
         const cellCode = document.createElement('img');
         cellCode.setAttribute('height', '75px');
-        // var cellCode = document.createTextNode(map[i][j]);
-        if (map[i][j] === BlockType.player) {
-          imgdiv.setAttribute('class', BlockType[BlockType.player]);
-          cellCode.setAttribute('src', gameStrings.images.player);
-        } else if (map[i][j] === BlockType.coin) {
-          imgdiv.setAttribute('class', BlockType[BlockType.coin]);
-          cellCode.setAttribute('src', gameStrings.images.coin);
-        } else if (map[i][j] === BlockType.wall) {
-          imgdiv.setAttribute('class', BlockType[BlockType.wall]);
-          cellCode.setAttribute('src', gameStrings.images.wall);
-        } else if (map[i][j] === BlockType.random) {
-          imgdiv.setAttribute('class', BlockType[BlockType.random]);
-          cellCode.setAttribute('src', gameStrings.images.random);
-        } else if (map[i][j] === BlockType.goal) {
-          imgdiv.setAttribute('class', BlockType[BlockType.goal]);
-          cellCode.setAttribute('src', gameStrings.images.goal);
-        } else if (map[i][j] === BlockType.bomb) {
-          imgdiv.setAttribute('class', BlockType[BlockType.bomb]);
-          cellCode.setAttribute('src', gameStrings.images.bomb);
-        } else if (map[i][j] === BlockType.void) {
-          imgdiv.setAttribute('class', BlockType[BlockType.void]);
-          cellCode.setAttribute('src', gameStrings.images.void);
-        }
+        imgdiv.setAttribute('class', BlockType[map[i][j]]);
+        cellCode.setAttribute('src', gameStrings.images[BlockType[map[i][j]]]);
         imgdiv.appendChild(cellCode);
         cell.appendChild(imgdiv);
         row.appendChild(cell);

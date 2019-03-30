@@ -30,11 +30,11 @@ export class Block {
    */
   public reaction(block: string, game: Game) {
     const blockType = BlockType[block];
-    if (blockType === 1) {
+    if (blockType === BlockType.coin) {
       game.getPlayer().addScore(10);
     }
 
-    if (blockType === 2) {
+    if (blockType === BlockType.bomb) {
       if (game.getPlayer().getLives() <= 0) {
         alert(gameStrings.dialogs.gameOver);
         game.getScoreList().addToScoreList(game.getPlayer());
@@ -43,11 +43,11 @@ export class Block {
       }
       alert(gameStrings.dialogs.bomb);
       game.getPlayer().takeLife();
-      game.getPlayer().addScore(-10);
+      game.getPlayer().addScore(-25);
       game.reset();
     }
 
-    if (blockType === 4) {
+    if (blockType === BlockType.goal) {
       alert(gameStrings.dialogs.goal);
       if (game.getLevel() === game.getMaxLevels()) {
         game.getScoreList().addToScoreList(game.getPlayer());
@@ -58,7 +58,7 @@ export class Block {
       game.increaseLevel();
     }
 
-    if (blockType === 5) {
+    if (blockType === BlockType.random) {
       const randomType = Block.getRandomInt(1, 3);
       alert(gameStrings.dialogs.question + ' ' + BlockType[randomType] + '!');
       this.reaction(BlockType[randomType], game);

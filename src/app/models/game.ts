@@ -1,9 +1,9 @@
 import {Player} from './player';
-import { Block } from './block';
+import {Block, BlockType} from './block';
 import { LevelHandler } from './level-handler';
-import * as gameStrings from '../../assets/resources/strings.json';
 import {ScoreList} from './score-list';
 import {isNull} from 'util';
+import * as gameStrings from '../../assets/resources/strings.json';
 
 enum MovementDirection {
   up = -10,
@@ -17,7 +17,7 @@ export class Game {
   private sessionPlayer: Player;
   private sessionLevelHandler: LevelHandler;
   private scoreList: ScoreList;
-  private maxLevels = 5;
+  private maxLevels = gameStrings.config.maxLevels;
 
   constructor(player: Player) {
     this.sessionLevel = 1;
@@ -124,13 +124,13 @@ export class Game {
     let targetBlockElement = document.getElementById(String(targetBlockId)).firstChild as HTMLElement;
     let targetBlockElementClass = targetBlockElement.getAttribute('class');
 
-    while (targetBlockElementClass !== 'wall') {
-      targetBlockElement.setAttribute('class', 'player');
+    while (targetBlockElementClass !== BlockType[BlockType.wall]) {
+      targetBlockElement.setAttribute('class', BlockType[BlockType.player]);
 
       const targetBlockImageElement = targetBlockElement.firstChild as HTMLElement;
       targetBlockImageElement.setAttribute('src', gameStrings.images.player);
 
-      playerDOMElement.setAttribute('class', 'void');
+      playerDOMElement.setAttribute('class', BlockType[BlockType.void]);
       const playerImageElement = playerDOMElement.firstChild as HTMLElement;
       playerImageElement.setAttribute('src', gameStrings.images.void);
 
@@ -144,7 +144,7 @@ export class Game {
 
       targetBlockElement = document.getElementById(String(targetBlockId)).firstChild as HTMLElement;
       targetBlockElementClass = targetBlockElement.getAttribute('class');
-      playerDOMElement = document.getElementsByClassName('player')[0];
+      playerDOMElement = document.getElementsByClassName(BlockType[BlockType.player])[0];
     }
   }
 
