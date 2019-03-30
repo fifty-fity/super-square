@@ -13,7 +13,7 @@ enum MovementDirection {
 }
 
 export class Game {
-  private sessionLevel: number;
+  public sessionLevel: number;
   private sessionPlayer: Player;
   private sessionLevelHandler: LevelHandler;
   private scoreList: ScoreList;

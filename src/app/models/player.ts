@@ -1,8 +1,8 @@
 
 export class Player {
-  private name: string;
-  private lives: number;
-  private score: number;
+  public name: string;
+  public lives: number;
+  public score: number;
 
   constructor() {
     this.name = '';

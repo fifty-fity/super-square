@@ -1,5 +1,5 @@
 <div class="background">
   		<label id="namelabel">Enter Player's Name</label>
     <br><input #name type="text" id="pname" name="playername" placeholder="Your player name..">
-    <br><a class="btn" routerLink="/board" routerLinkActive="active" (click)="setNamePlay(name.value); location.reload();">Start Game!</a>
+    <br><a class="btn" routerLink="/board" routerLinkActive="active" (click)="name(name.value)">Start Game!</a>
 </div>
