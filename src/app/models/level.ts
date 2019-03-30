@@ -4,20 +4,24 @@ import {log} from 'util';
 export class Level {
   private levelMap: string[][];
   private maxLevel = 6;
-  private num: number;
 
   public getLevelMap(): string[][] {
     return this.levelMap;
   }
 
+  /**
+   * Sets in memory the level map from a json file.
+   * @param levelNumber The ID number of the level e.g. 2
+   */
   public setLevelMap(levelNumber: number) {
     const tempMap = [];
-    log(levelNumber);
 
+    // Check if it's beyond the max level and reset it back to the first in that case.
     if (levelNumber === this.maxLevel) {
       levelNumber = 1;
     }
 
+    // Adjust the level number to match array identifiers
     if (levelNumber === 1) {
       levelNumber = 0;
     }

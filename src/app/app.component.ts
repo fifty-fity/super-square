@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {log} from 'util';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
       if (this.localName != null) {
         this.name = this.localName;
+        log('Test');
       }
     }
 

@@ -14,7 +14,6 @@ export class NameComponent implements OnInit {
   }
   setNamePlay(name: string) {
     localStorage.setItem('sessionPlayerName', name);
-    alert(gameStrings.dialogs.welcome + ' ' + localStorage.getItem('sessionPlayerName') + ' !');
+    alert(gameStrings.dialogs.welcome + ' ' + localStorage.getItem('sessionPlayerName') + '!');
   }
-
 }

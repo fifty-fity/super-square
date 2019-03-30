@@ -39,10 +39,11 @@ export class Block {
         alert(gameStrings.dialogs.gameOver);
         game.getScoreList().addToScoreList(game.getPlayer());
         game.endGame();
+        return;
       }
+      alert(gameStrings.dialogs.bomb);
       game.getPlayer().takeLife();
       game.reset();
-      alert(gameStrings.dialogs.bomb);
     }
 
     if (blockType === 4) {
@@ -58,8 +59,8 @@ export class Block {
 
     if (blockType === 5) {
       const randomType = Block.getRandomInt(1, 3);
-      this.reaction(BlockType[randomType], game);
       alert(gameStrings.dialogs.question + ' ' + BlockType[randomType] + '!');
+      this.reaction(BlockType[randomType], game);
     }
   }
 
