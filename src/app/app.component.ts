@@ -9,6 +9,7 @@ import {log} from 'util';
 export class AppComponent implements OnInit {
   public title = 'super-square';
   public name = '';
+
   private localName: string = localStorage.getItem('sessionPlayerName');
     ngOnInit(): void {
       if (this.localName != null) {
