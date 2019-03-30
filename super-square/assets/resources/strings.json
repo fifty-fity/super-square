@@ -1,0 +1,24 @@
+{
+  "config": {
+    "maxLevels": 5
+  },
+  "images": {
+    "player": "assets/images/player.png",
+    "void": "assets/images/void.png",
+    "coin": "assets/images/coin.png",
+    "random": "assets/images/question.png",
+    "bomb": "assets/images/bomb.png",
+    "wall": "assets/images/wall.png",
+    "goal": "assets/images/finish.png",
+    "undefined": "assets/images/undefined.png"
+  },
+  "dialogs": {
+    "bomb": "Boom! The board has been reset!",
+    "goal": "You've hit the goal! Advancing to the next level.",
+    "question": "You've found a...",
+    "gameOver": "Game over!",
+    "victory": "You've beaten the game!",
+    "noScores": "No scores to display.",
+    "welcome": "Good luck,"
+  }
+}
