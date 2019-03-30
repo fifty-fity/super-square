@@ -61,14 +61,28 @@
       "data": {
         "1": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"],
         "2": ["wall", "player", "void", "void", "void", "wall", "void", "void", "void", "wall"],
-        "3": ["wall", "wall", "wall", "wall", "coin", "void", "void", "void", "void", "wall"],
-        "4": ["wall", "question", "void", "wall", "wall", "void", "void", "void", "wall", "wall"],
-        "5": ["wall", "wall", "void", "void", "wall", "void", "void", "void", "void", "wall"],
-        "6": ["wall", "wall", "wall", "void", "void", "void", "wall", "void", "void", "wall"],
+        "3": ["wall", "wall", "wall", "wall", "coin", "void", "void", "void", "wall", "wall"],
+        "4": ["wall", "question", "void", "wall", "wall", "void", "void", "void", "void", "wall"],
+        "5": ["wall", "wall", "void", "void", "void", "void", "void", "void", "void", "wall"],
+        "6": ["wall", "wall", "void", "void", "void", "void", "wall", "void", "void", "wall"],
         "7": ["wall", "void", "void", "void", "bomb", "void", "void", "void", "wall", "wall"],
         "8": ["wall", "void", "wall", "wall", "wall", "coin", "wall", "void", "void", "wall"],
         "9": ["wall", "coin", "void", "void", "void", "void", "void", "void", "void", "wall"],
         "10": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "finish", "wall"]
+      }
+    },
+    "6": {
+      "data": {
+        "1": ["void", "void", "void", "void", "void", "void", "void", "void", "void", "void"],
+        "2": ["void", "void", "void", "void", "void", "void", "void", "void", "void", "void"],
+        "3": ["bomb", "void", "void", "void", "bomb", "bomb", "void", "void", "bomb", "void"],
+        "4": ["bomb", "void", "void", "void", "bomb", "bomb", "void", "void", "bomb", "void"],
+        "5": ["bomb", "bomb", "void", "void", "bomb", "bomb", "void", "void", "bomb", "bomb"],
+        "6": ["void", "void", "void", "void", "void", "void", "void", "void", "void", "void"],
+        "7": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"],
+        "8": ["wall", "player", "coin", "coin", "coin", "coin", "coin", "coin", "coin", "wall"],
+        "9": ["wall", "finish", "wall", "coin", "coin", "coin", "coin", "coin", "coin", "wall"],
+        "10": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"]
       }
     }
   }

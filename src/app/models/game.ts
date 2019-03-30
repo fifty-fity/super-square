@@ -87,18 +87,21 @@ export class Game {
       }
       switch (event.key) {
         case 'ArrowDown':
+        case 's':
           self.move(MovementDirection.down);
           break;
         case 'ArrowUp':
+        case 'w':
           self.move(MovementDirection.up);
           break;
         case 'ArrowLeft':
+        case 'a':
           self.move(MovementDirection.left);
           break;
         case 'ArrowRight':
+        case 'd':
           self.move(MovementDirection.right);
           break;
-
         default: return;
       }
       event.preventDefault();

@@ -13,7 +13,6 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
       if (this.localName != null) {
         this.name = this.localName;
-        log('Test');
       }
     }
 

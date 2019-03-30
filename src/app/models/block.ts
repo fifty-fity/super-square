@@ -29,7 +29,6 @@ export class Block {
    */
   public reaction(block: string, game: Game) {
     const blockType = BlockType[block];
-    // TODO: Replace alerts with a better kind of response.
     if (blockType === 1) {
       game.getPlayer().addScore(10);
     }
@@ -43,6 +42,7 @@ export class Block {
       }
       alert(gameStrings.dialogs.bomb);
       game.getPlayer().takeLife();
+      game.getPlayer().addScore(-10);
       game.reset();
     }
 
