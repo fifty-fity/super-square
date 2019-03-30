@@ -3,7 +3,7 @@
     "player": "assets/images/player.png",
     "void": "assets/images/void.png",
     "coin": "assets/images/coin.png",
-    "question": "assets/images/question.png",
+    "random": "assets/images/question.png",
     "bomb": "assets/images/bomb.png",
     "wall": "assets/images/wall.png",
     "goal": "assets/images/finish.png"

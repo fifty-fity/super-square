@@ -2,10 +2,10 @@ import * as levelData from '../../assets/resources/levels.json';
 import {log} from 'util';
 
 export class Level {
-  private levelMap: string[][];
+  private levelMap: number[][];
   private maxLevel = 6;
 
-  public getLevelMap(): string[][] {
+  public getLevelMap(): number[][] {
     return this.levelMap;
   }
 

@@ -1,6 +1,5 @@
-import { Block } from './block';
-import {Player} from './player';
 import { Level } from './level';
+import {BlockType} from './block';
 import * as gameStrings from '../../assets/resources/strings.json';
 
 export class LevelHandler {
@@ -8,7 +7,7 @@ export class LevelHandler {
    * Spawns the board for the game.
    * @param map The map to spawn.
    */
-  public spawnBoard(map: string[][]) {
+  public spawnBoard(map: number[][]) {
     const mydiv = document.getElementById('mydiv');
     const mytable = document.getElementById('mytable');
 
@@ -24,26 +23,26 @@ export class LevelHandler {
         const cellCode = document.createElement('img');
         cellCode.setAttribute('height', '75px');
         // var cellCode = document.createTextNode(map[i][j]);
-        if (map[i][j] === 'player') {
-          imgdiv.setAttribute('class', 'player');
+        if (map[i][j] === BlockType.player) {
+          imgdiv.setAttribute('class', BlockType[BlockType.player]);
           cellCode.setAttribute('src', gameStrings.images.player);
-        } else if (map[i][j] === 'coin') {
-          imgdiv.setAttribute('class', 'coin');
+        } else if (map[i][j] === BlockType.coin) {
+          imgdiv.setAttribute('class', BlockType[BlockType.coin]);
           cellCode.setAttribute('src', gameStrings.images.coin);
-        } else if (map[i][j] === 'wall') {
-          imgdiv.setAttribute('class', 'wall');
+        } else if (map[i][j] === BlockType.wall) {
+          imgdiv.setAttribute('class', BlockType[BlockType.wall]);
           cellCode.setAttribute('src', gameStrings.images.wall);
-        } else if (map[i][j] === 'question') {
-          imgdiv.setAttribute('class', 'question');
-          cellCode.setAttribute('src', gameStrings.images.question);
-        } else if (map[i][j] === 'finish') {
-          imgdiv.setAttribute('class', 'goal');
+        } else if (map[i][j] === BlockType.random) {
+          imgdiv.setAttribute('class', BlockType[BlockType.random]);
+          cellCode.setAttribute('src', gameStrings.images.random);
+        } else if (map[i][j] === BlockType.goal) {
+          imgdiv.setAttribute('class', BlockType[BlockType.goal]);
           cellCode.setAttribute('src', gameStrings.images.goal);
-        } else if (map[i][j] === 'bomb') {
-          imgdiv.setAttribute('class', 'bomb');
+        } else if (map[i][j] === BlockType.bomb) {
+          imgdiv.setAttribute('class', BlockType[BlockType.bomb]);
           cellCode.setAttribute('src', gameStrings.images.bomb);
-        } else if (map[i][j] === 'void') {
-          imgdiv.setAttribute('class', 'void');
+        } else if (map[i][j] === BlockType.void) {
+          imgdiv.setAttribute('class', BlockType[BlockType.void]);
           cellCode.setAttribute('src', gameStrings.images.void);
         }
         imgdiv.appendChild(cellCode);
@@ -59,11 +58,9 @@ export class LevelHandler {
    * Loads a given level.
    * @param levelNumber The level number.
    */
-   public loadLevel(levelNumber: number): string[][] {
+   public loadLevel(levelNumber: number): number[][] {
      const level: Level = new Level();
-     let Map: string[][];
      level.setLevelMap(levelNumber);
-     Map = level.getLevelMap();
-     return Map;
+     return level.getLevelMap();
    }
 }

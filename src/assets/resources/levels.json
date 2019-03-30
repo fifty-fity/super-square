@@ -2,87 +2,87 @@
   "levels": {
     "1": {
         "data": {
-          "1": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"],
-          "2": ["wall", "player", "void", "void", "bomb", "wall", "void", "void", "void", "wall"],
-          "3": ["wall", "void", "void", "wall", "coin", "void", "void", "void", "void", "wall"],
-          "4": ["wall", "void", "void", "wall", "wall", "void", "void", "void", "void", "wall"],
-          "5": ["wall", "wall", "void", "void", "void", "void", "void", "void", "void", "wall"],
-          "6": ["wall", "question", "void", "void", "void", "void", "wall", "void", "void", "wall"],
-          "7": ["wall", "void", "void", "void", "void", "void", "wall", "wall", "void", "wall"],
-          "8": ["wall", "wall", "wall", "wall", "void", "coin", "wall", "finish", "void", "wall"],
-          "9": ["wall", "coin", "void", "void", "void", "void", "wall", "void", "void", "wall"],
-          "10": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"]
+          "1": [3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+          "2": [3, 6, 0, 0, 2, 3, 0, 0, 0, 3],
+          "3": [3, 0, 0, 3, 1, 0, 0, 0, 0, 3],
+          "4": [3, 0, 0, 3, 3, 0, 0, 0, 0, 3],
+          "5": [3, 3, 0, 0, 0, 0, 0, 0, 0, 3],
+          "6": [3, 5, 0, 0, 0, 0, 3, 0, 0, 3],
+          "7": [3, 0, 0, 0, 0, 0, 3, 3, 0, 3],
+          "8": [3, 3, 3, 3, 0, 1, 3, 4, 0, 3],
+          "9": [3, 1, 0, 0, 0, 0, 3, 0, 0, 3],
+          "10": [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
         }
       },
     "2": {
       "data": {
-        "1":["wall","wall","wall","wall","wall","wall","wall","wall","wall","wall"],
-        "2":["wall","player","void","void","void","wall","void","void","void","wall"],
-        "3":["wall","void","void","void","void","void","void","void","void","wall"],
-        "4":["wall","wall","void","void","void","void","void","void","wall","wall"],
-        "5":["wall","wall","void","void","void","wall","void","void","wall","wall"],
-        "6":["wall","wall","void","void","wall","finish","void","void","coin","wall"],
-        "7":["wall","void","void","void","void","void","void","void","void","wall"],
-        "8":["wall","void","void","wall","void","void","void","void","wall","wall"],
-        "9":["wall","coin","wall","coin","void","void","void","question","wall","wall"],
-        "10":["wall","wall","wall","wall","wall","wall","wall","wall","wall","wall"]
+        "1":[3,3,3,3,3,3,3,3,3,3],
+        "2":[3,6,0,0,0,3,0,0,0,3],
+        "3":[3,0,0,0,0,0,0,0,0,3],
+        "4":[3,3,0,0,0,0,0,0,3,3],
+        "5":[3,3,0,0,0,3,0,0,3,3],
+        "6":[3,3,0,0,3,4,0,0,1,3],
+        "7":[3,0,0,0,0,0,0,0,0,3],
+        "8":[3,0,0,3,0,0,0,0,3,3],
+        "9":[3,1,3,1,0,0,0,5,3,3],
+        "10":[3,3,3,3,3,3,3,3,3,3]
       }
     },
     "3": {
       "data": {
-        "1":["wall","wall","wall","wall","wall","wall","wall","wall","wall","wall"],
-        "2":["wall","player","void","wall","coin","wall","wall","wall","wall","wall"],
-        "3":["wall","void","wall","void","void","bomb","void","void","wall","wall"],
-        "4":["wall","void","void","void","void","void","wall","void","void","wall"],
-        "5":["wall","void","void","wall","void","void","coin","void","wall","wall"],
-        "6":["wall","wall","void","void","wall","finish","void","void","void","wall"],
-        "7":["wall","void","void","bomb","wall","void","void","void","void","wall"],
-        "8":["wall","void","wall","wall","void","void","void","coin","void","wall"],
-        "9":["wall","void","void","void","void","void","void","wall","void","wall"],
-        "10":["wall","wall","wall","wall","wall","wall","wall","wall","wall","wall"]
+        "1":[3,3,3,3,3,3,3,3,3,3],
+        "2":[3,6,0,3,1,3,3,3,3,3],
+        "3":[3,0,3,0,0,2,0,0,3,3],
+        "4":[3,0,0,0,0,0,3,0,0,3],
+        "5":[3,0,0,3,0,0,1,0,3,3],
+        "6":[3,3,0,0,3,4,0,0,0,3],
+        "7":[3,0,0,2,3,0,0,0,0,3],
+        "8":[3,0,3,3,0,0,0,1,0,3],
+        "9":[3,0,0,0,0,0,0,3,0,3],
+        "10":[3,3,3,3,3,3,3,3,3,3]
 
       }
     },
     "4": {
       "data": {
-        "1": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"],
-        "2": ["wall", "player", "void", "void", "wall", "void", "void", "void", "void", "wall"],
-        "3": ["wall", "void", "void", "void", "void", "void", "void", "void", "void", "wall"],
-        "4": ["wall", "void", "void", "bomb", "wall", "question", "void", "void", "void", "wall"],
-        "5": ["wall", "void", "void", "wall", "wall", "wall", "void", "void", "void", "wall"],
-        "6": ["wall", "void", "void", "wall", "coin", "void", "void", "coin", "wall", "wall"],
-        "7": ["wall", "void", "wall", "void", "void", "void", "coin", "wall", "wall", "wall"],
-        "8": ["wall", "void", "void", "void", "void", "void", "wall", "finish", "void", "wall"],
-        "9": ["wall", "void", "void", "wall", "void", "void", "void", "void", "void", "wall"],
-        "10": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"]
+        "1": [3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        "2": [3, 6, 0, 0, 3, 0, 0, 0, 0, 3],
+        "3": [3, 0, 0, 0, 0, 0, 0, 0, 0, 3],
+        "4": [3, 0, 0, 2, 3, 5, 0, 0, 0, 3],
+        "5": [3, 0, 0, 3, 3, 3, 0, 0, 0, 3],
+        "6": [3, 0, 0, 3, 1, 0, 0, 1, 3, 3],
+        "7": [3, 0, 3, 0, 0, 0, 1, 3, 3, 3],
+        "8": [3, 0, 0, 0, 0, 0, 3, 4, 0, 3],
+        "9": [3, 0, 0, 3, 0, 0, 0, 0, 0, 3],
+        "10": [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
       }
     },
     "5": {
       "data": {
-        "1": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"],
-        "2": ["wall", "player", "void", "void", "void", "wall", "void", "void", "void", "wall"],
-        "3": ["wall", "wall", "wall", "wall", "coin", "void", "void", "void", "wall", "wall"],
-        "4": ["wall", "question", "void", "wall", "wall", "void", "void", "void", "void", "wall"],
-        "5": ["wall", "wall", "void", "void", "void", "void", "void", "void", "void", "wall"],
-        "6": ["wall", "wall", "void", "void", "void", "void", "wall", "void", "void", "wall"],
-        "7": ["wall", "void", "void", "void", "bomb", "void", "void", "void", "wall", "wall"],
-        "8": ["wall", "void", "wall", "wall", "wall", "coin", "wall", "void", "void", "wall"],
-        "9": ["wall", "coin", "void", "void", "void", "void", "void", "void", "void", "wall"],
-        "10": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "finish", "wall"]
+        "1": [3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        "2": [3, 6, 0, 0, 0, 3, 0, 0, 0, 3],
+        "3": [3, 3, 3, 3, 1, 0, 0, 0, 3, 3],
+        "4": [3, 5, 0, 3, 3, 0, 0, 0, 0, 3],
+        "5": [3, 3, 0, 0, 0, 0, 0, 0, 0, 3],
+        "6": [3, 3, 0, 0, 0, 0, 3, 0, 0, 3],
+        "7": [3, 0, 0, 0, 2, 0, 0, 0, 3, 3],
+        "8": [3, 0, 3, 3, 3, 1, 3, 0, 0, 3],
+        "9": [3, 1, 0, 0, 0, 0, 0, 0, 0, 3],
+        "10": [3, 3, 3, 3, 3, 3, 3, 3, 4, 3]
       }
     },
     "6": {
       "data": {
-        "1": ["void", "void", "void", "void", "void", "void", "void", "void", "void", "void"],
-        "2": ["void", "void", "void", "void", "void", "void", "void", "void", "void", "void"],
-        "3": ["bomb", "void", "void", "void", "bomb", "bomb", "void", "void", "bomb", "void"],
-        "4": ["bomb", "void", "void", "void", "bomb", "bomb", "void", "void", "bomb", "void"],
-        "5": ["bomb", "bomb", "void", "void", "bomb", "bomb", "void", "void", "bomb", "bomb"],
-        "6": ["void", "void", "void", "void", "void", "void", "void", "void", "void", "void"],
-        "7": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"],
-        "8": ["wall", "player", "coin", "coin", "coin", "coin", "coin", "coin", "coin", "wall"],
-        "9": ["wall", "finish", "wall", "coin", "coin", "coin", "coin", "coin", "coin", "wall"],
-        "10": ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"]
+        "1": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        "2": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        "3": [2, 0, 0, 0, 2, 2, 0, 0, 2, 0],
+        "4": [2, 0, 0, 0, 2, 2, 0, 0, 2, 0],
+        "5": [2, 2, 0, 0, 2, 2, 0, 0, 2, 2],
+        "6": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        "7": [3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        "8": [3, 6, 1, 1, 1, 1, 1, 1, 1, 3],
+        "9": [3, 4, 3, 1, 1, 1, 1, 1, 1, 3],
+        "10": [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
       }
     }
   }

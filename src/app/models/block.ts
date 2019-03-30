@@ -1,12 +1,13 @@
 import {Game} from './game';
 import * as gameStrings from '../../assets/resources/strings.json';
 
-enum BlockType {
+export enum BlockType {
+  void = 0,
   coin = 1,
   bomb = 2,
   wall = 3,
   goal = 4,
-  question = 5,
+  random = 5,
   player = 6
 }
 

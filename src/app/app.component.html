@@ -4,7 +4,7 @@
 <img class="logo" alt="Logo" src="assets/images/logo.png">
   <div id="header">
     <div id="title">
-      <h1>{{ title }}!</h1>
+      <h1><a class="titleLink" href="./">{{ title }}!</a></h1>
       <!-- <img class="logo" alt="Logo" src="assets/images/logo.png"> -->
     </div>
     <ul class="nav">
@@ -24,7 +24,7 @@
       <a class="btn"routerLink="/name" routerLinkActive="active">Play now!</a>
     </div>
     <br>
-  <div style="float:left">
+  <div *ngIf="name!=''" style="float:left">
     <h2 class="name" ><span>Name:</span> {{name}}</h2>
   </div>
 
