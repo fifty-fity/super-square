@@ -63,7 +63,7 @@ export class Game {
   public endGame() {
     this.sessionPlayer.prune();
     this.setLevel(1);
-    window.location.href = './scores';
+    window.location.href = './scores/';
   }
 
   /**
