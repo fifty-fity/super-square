@@ -22,6 +22,8 @@ describe("Game", function () {
 
 });
 
+//the below test throws a 404
+
 //describe("Game", function () {
 //  beforeEach(function () {
 //    this.player = new Player();
