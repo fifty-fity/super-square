@@ -3,6 +3,7 @@
   "compilerOptions": {
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "outDir": "../out-tsc/app",
     "types": []
   },

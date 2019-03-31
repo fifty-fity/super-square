@@ -1,4 +1,4 @@
-import {Game} from './game';
+import { Game } from './game';
 import * as gameStrings from '../../assets/resources/strings.json';
 
 export enum BlockType {
@@ -67,5 +67,9 @@ export class Block {
 
   public setType(blockType: BlockType) {
     this.type = blockType;
+  }
+
+  public getType() {
+    return this.type;
   }
 }

@@ -23,6 +23,7 @@ export class Game {
     this.sessionLevel = 1;
     this.sessionPlayer = player;
     this.scoreList = new ScoreList();
+    this.sessionLevelHandler = new LevelHandler();
   }
 
   /**
