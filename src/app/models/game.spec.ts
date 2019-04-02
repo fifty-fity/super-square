@@ -8,27 +8,27 @@ describe('Game', () => {
   });
 });
 
-describe("Game", function () {
-  beforeEach(function () {
+describe('Game', () => {
+  beforeEach(() => {
     this.player = new Player();
     this.game = new Game(this.player);
   });
 
-  it("create new player", function () {
+  it('create new player', () => {
     expect(this.game.getLevel()).toBe(1);
   });
 
 
 });
 
-describe("Game", function () {
-  beforeEach(function () {
+describe('Game', () => {
+  beforeEach(() => {
     this.player = new Player();
     this.game = new Game(this.player);
     this.game.increaseLevel();
   });
 
-  it("increasing level works", function () {
+  it('increasing level works', () => {
     expect(this.game.getLevel()).toBe(2);
   });
 
@@ -36,56 +36,30 @@ describe("Game", function () {
 });
 
 
-describe("Game", function () {
-  beforeEach(function () {
+describe('Game', () => {
+  beforeEach(() => {
     this.player = new Player();
     this.game = new Game(this.player);
     this.game.setLevel(2);
   });
 
-  it("setting level works", function () {
+  it('setting level works', () => {
     expect(this.game.getLevel()).toBe(2);
   });
 
 
 });
 
-describe("Game", function () {
-  beforeEach(function () {
+describe('Game', () => {
+  beforeEach(() => {
     this.player = new Player();
     this.game = new Game(this.player);
     this.game.setLevel(2);
     this.game.reset();
   });
 
-  it("resetting level works", function () {
+  it('resetting level works', () => {
     expect(this.game.getLevel()).toBe(2);
   });
 
 });
-
-
-
-
-
-
-
-
-
-/*
-//the below test throws a 404
-describe("Game", function () {
-  beforeEach(function () {
-    this.player = new Player();
-    this.game = new Game(this.player);
-  //  this.game.setLevel(3);
-    this.game.increaseLevel();
-    this.game.endGame();
-  });
-
-  it("endGame resets to level 1", function () {
-    expect(this.game.getLevel()).toBe(1);
-  });
-
-});
-*/
